@@ -8,8 +8,8 @@
   <title>Medicio Bootstrap Template - Index</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-    {% load static %}
 
+    {% load static %}
   <!-- Favicons -->
   <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
   <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
@@ -20,23 +20,15 @@
   <!-- Vendor CSS Files -->
   <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/aos/aos.cssdor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/box icons/css/box icons.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/glight box/css/glight box.min.cssgl' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Medicio
-  * Updated: Jan 29 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/medicio-free-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -57,7 +49,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <a href="index.html" class="logo me-auto"><img src="{% static 'assets/img/logo.png' %}" alt=""></a>
+      <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <h1 class="logo me-auto"><a href="index.html">Medicio</a></h1> -->
 
@@ -68,13 +60,14 @@
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="#departments">Departments</a></li>
           <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
-          <li class="dropdown"><a href="#"><span>ADMIN INTERFACE</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>ADMIN SECTION</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{% url 'register' %}">REGISTER</a></li>
               <li class="dropdown"><a href="{% url 'login' %}"><span>LOGIN</span> <i class="bi bi-chevron-right"></i></a>
-               
+              
+            </ul>
           </li>
-         
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -93,7 +86,7 @@
       <div class="carousel-inner" role="listbox">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image:{% static 'assets/img/slide/slide-1.jpg' %}">
+        <div class="carousel-item active" style="background-image: url({% static 'assets/img/slide/slide-1.jpg' %})">
           <div class="container">
             <h2>Welcome to <span>Medicio</span></h2>
             <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel.</p>
@@ -102,7 +95,7 @@
         </div>
 
         <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image:{ % static 'assets/img/slide/slide-2.jpg' %}">
+        <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-2.jpg' %})">
           <div class="container">
             <h2>Lorem Ipsum Dolor</h2>
             <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel.</p>
@@ -111,7 +104,7 @@
         </div>
 
         <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: { % static 'assets/img/slide/slide-3.jpg' %}">
+        <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-3.jpg' %})">
           <div class="container">
             <h2>Sequi ea ut et est quaerat</h2>
             <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel.</p>
@@ -124,16 +117,6 @@
       <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
       </a>
-
-Sed ut perspiciatis
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-Magni Dolores
-
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-Nemo Enim
-
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
 
       <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
         <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
@@ -570,7 +553,7 @@ At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
         </div>
 
       </div>
-    </section><!-- End TestimonVassets/img/testimonials/testimonials-5.jpgassets/img/testimonials/testimonials-5.jpgials Section -->
+    </section><!-- End Testimonials Section -->
 
     <!-- ======= Doctors Section ======= -->
     <section id="doctors" class="doctors section-bg">
@@ -648,17 +631,7 @@ At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
                   <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
-              <div class="member-inf
-Sed ut perspiciatis
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-Magni Dolores
-
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-Nemo Enim
-
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-o">
+              <div class="member-info">
                 <h4>Amanda Jepson</h4>
                 <span>Neurosurgeon</span>
               </div>
@@ -681,14 +654,14 @@ o">
 
         <div class="gallery-slider swiper">
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><a class="gallery-lightbox" href="{% static 'assets/img/gallery/gallery-1.jpg' %}"><img src="{% static 'assets/img/gallery/gallery-1.jpg' %}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="gallery-lightbox" href="{% static 'assets/img/gallery/gallery-2.jpg' %}"><img src="{% static 'assets/img/gallery/gallery-2.jpg' %}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="gallery-lightbox" href="{% static 'assets/img/gallery/gallery-3.jpg' %}"><img src="{% static 'assets/img/gallery/gallery-3.jpg' %}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="gallery-lightbox" href="{% static 'assets/img/gallery/gallery-4.jpg' %}"><img src="{% static 'assets/img/gallery/gallery-4.jpg' %}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="gallery-lightbox" href="{% static 'assets/img/gallery/gallery-5.jpg' %}"><img src="{% static 'assets/img/gallery/gallery-5.jpg' %}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="gallery-lightbox" href="{% static 'assets/img/gallery/gallery-6.jpg' %}"><img src="{% static 'assets/img/gallery/gallery-6.jpg' %}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="gallery-lightbox" href="{% static 'assets/img/gallery/gallery-7.jpg' %}"><img src="{% static 'assets/img/gallery/gallery-7.jpg' %}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="gallery-lightbox" href="{% static 'assets/img/gallery/gallery-7.jpg' %}"><img src="{% static 'assets/img/gallery/gallery-8.jpg' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/gallery/gallery-1.jpg"><img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/gallery/gallery-2.jpg"><img src="assets/img/gallery/gallery-2.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/gallery/gallery-3.jpg"><img src="assets/img/gallery/gallery-3.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/gallery/gallery-4.jpg"><img src="assets/img/gallery/gallery-4.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/gallery/gallery-5.jpg"><img src="assets/img/gallery/gallery-5.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/gallery/gallery-6.jpg"><img src="assets/img/gallery/gallery-6.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/gallery/gallery-7.jpg"><img src="assets/img/gallery/gallery-7.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/gallery/gallery-8.jpg"><img src="assets/img/gallery/gallery-8.jpg" class="img-fluid" alt=""></a></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
